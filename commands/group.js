@@ -35,7 +35,7 @@ cmd({
                 let media = await citel.quoted.download();
                 let sticker = new Sticker(media, {
                     pack: citel.pushName, // The pack name
-                    author: "𝙼𝙾𝙾𝙽 ᪘", // The author name
+                    author: "𝙴𝙳𝙸𝚃𝙷 ᪘", // The author name
                     type: text.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
                     categories: ["🤩", "🎉"], // The sticker category
                     id: "12345", // The sticker id
