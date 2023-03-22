@@ -85,14 +85,14 @@ async(Void, citel, text,{ isCreator }) => {
 
        const deduct = await eco.deduct(user1, secktor, value[0]);
        const give = await eco.give(user2, secktor, value[0]);
-       return await citel.reply(`⊹⊱≼━━━⌬〔🌑〕⌬━━━≽⊰⊹
-↫ ⟦ بـنـك مـون 🏦 ⟧
+       return await citel.reply(`⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹
+↫ ⟦ بـنـك ايديث 🏦 ⟧
 
 ֎ ╎تـم تـحـويـل  *${value[0]}*a  مـن حـسـابـك
 
 ֎ ╎لـمـعـرفـة رصـيـدك اكـتـب *.اموالي*
 
-⊹⊱≼━━━⌬〔🌑〕⌬━━━≽⊰⊹`)
+⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹`)
 
 
 }
@@ -114,12 +114,12 @@ async(Void, citel, text,{ isCreator }) => {
         if (mongoschemas == "false") return citel.reply("֎╎لـم يـتـم تـشـغـيـل الـبـنـك فـالـمـجـمـوعـة");
          const secktor = "secktor"
          const balance = await eco.balance(citel.sender, secktor); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
-         return await citel.reply(`⊹⊱≼━━━⌬〔🌑〕⌬━━━≽⊰⊹
-↫ ⟦ بـنـك مـون 🏦 ⟧
+         return await citel.reply(`⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹
+↫ ⟦ بـنـك ايديث 🏦 ⟧
              
 ֎ ╎رصـيـدك 💰 ⟦ ${balance.wallet} بيلي ⟧
              
-⊹⊱≼━━━⌬〔🌑〕⌬━━━≽⊰⊹`)
+⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹`)
      
      }
      )
