@@ -54,49 +54,6 @@ str+= `ـ *${i+1}* \n╮─────────────ـ\n│ *⧉ - ا
         
     })
 
-cmd({
-   pattern: "تحويل",
-   filename: __filename,
-},
-async(Void, citel, text,{ isCreator }) => {
-   let zerogroup = (await sck.findOne({
-       id: citel.chat,
-   })) || (await new sck({
-           id: citel.chat,
-       })
-       .save());
-   let mongoschemas = zerogroup.economy || "false";
-   if (mongoschemas == "false") return citel.reply("֎╎لـم يـتـم تـشـغـيـل الـبـنـك فـالـمـجـمـوعـة");
-   let value = text.trim().split(" ");
-   if (value[0] === "") return citel.reply(`مثال : .تحويل 1000 @منشن احد`);
-   let user = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
-   if(!user) return citel.reply('֎╎مـنـشـن احـد بـعـد الأمـر @');
-   const secktor = "secktor"
-       const user1 = citel.sender
-       const user2 = user
-       const word = value[0];
-       const code = value[1];
-       let d = parseInt(word)
-       if (!d) return citel.reply("֎╎لـم تـسـتـخـدم الأمـر بـشـكـل صـحـيـح");
-       const balance = await eco.balance(user1, secktor);
-       let a = (balance.wallet) < parseInt(word)
-       //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
-       if(a == true) return citel.reply("يا فقير انت وما عندك ذا المقدار وتبي تحوله ؟");
-
-       const deduct = await eco.deduct(user1, secktor, value[0]);
-       const give = await eco.give(user2, secktor, value[0]);
-       return await citel.reply(`⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹
-↫ ⟦ بـنـك ايديث 🏦 ⟧
-
-֎ ╎تـم تـحـويـل  *${value[0]}*a  مـن حـسـابـك
-
-֎ ╎لـمـعـرفـة رصـيـدك اكـتـب *.اموالي*
-
-⊹⊱≼━━━⌬〔💠〕⌬━━━≽⊰⊹`)
-
-
-}
-)
 
     //---------------------------------------------------------------------------
     cmd({
