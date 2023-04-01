@@ -86,3 +86,14 @@ const S=m;function Z(){const F=['126402oKAcRa','date','سيتم طرده لان�
  
      )
      //--------------------------------------------------------------------------- 
+
+
+cmd({
+        pattern: "الوقت",
+        filename: __filename,
+    },
+    async(Void, citel, text) => {
+        let now = new Date().toLocaleTimeString("en-US", { hour12: false, timeZone: "Asia/Riyadh" });
+        citel.reply(` ${now}`);
+    }
+    )
